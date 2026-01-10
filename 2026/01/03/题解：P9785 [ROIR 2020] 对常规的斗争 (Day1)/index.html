@@ -22,7 +22,7 @@
     <meta name="description" content="题目传送门 # 思路 我们不难发现，当区间中没有重复的点很好求，但如果中间部分产生重复的点，他们所产生的贡献会减少。 正着推不好推，那就反着来。 我们可以考虑计算当区间长度确定时，每个区间内每个元素是否出现过。 我们可以发现，当我们把区间内的相同元素单独拎出来（下文称为 iii），如果存在一个区间在他们中间，那这个区间的内肯定不包含 iii 这个元素，所以，我们只需把这几个不包含 iii 元素的区">
 <meta property="og:type" content="article">
 <meta property="og:title" content="题解：P9785 [ROIR 2020] 对常规的斗争 (Day1)">
-<meta property="og:url" content="http://example.com/2026/01/03/%E9%A2%98%E8%A7%A3%EF%BC%9AP9785%20[ROIR%202020]%20%E5%AF%B9%E5%B8%B8%E8%A7%84%E7%9A%84%E6%96%97%E4%BA%89%20(Day1)/index.html">
+<meta property="og:url" content="https://pt-ll.github.io/2026/01/03/%E9%A2%98%E8%A7%A3%EF%BC%9AP9785%20[ROIR%202020]%20%E5%AF%B9%E5%B8%B8%E8%A7%84%E7%9A%84%E6%96%97%E4%BA%89%20(Day1)/index.html">
 <meta property="og:site_name" content="Pt.ll&#39;s blog">
 <meta property="og:description" content="题目传送门 # 思路 我们不难发现，当区间中没有重复的点很好求，但如果中间部分产生重复的点，他们所产生的贡献会减少。 正着推不好推，那就反着来。 我们可以考虑计算当区间长度确定时，每个区间内每个元素是否出现过。 我们可以发现，当我们把区间内的相同元素单独拎出来（下文称为 iii），如果存在一个区间在他们中间，那这个区间的内肯定不包含 iii 这个元素，所以，我们只需把这几个不包含 iii 元素的区">
 <meta property="og:locale" content="zh_CN">
@@ -45,6 +45,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -72,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"pt-ll.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -168,6 +170,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -334,7 +348,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>题解：P9785 [ROIR 2020] 对常规的斗争 (Day1)</div>
-      <div>http://example.com/2026/01/03/题解：P9785 [ROIR 2020] 对常规的斗争 (Day1)/</div>
+      <div>https://pt-ll.github.io/2026/01/03/题解：P9785 [ROIR 2020] 对常规的斗争 (Day1)/</div>
     </div>
     <div class="license-meta">
       
@@ -440,6 +454,11 @@
 
 
   
+
+
+  
+  
+
 
 
 

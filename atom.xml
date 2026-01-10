@@ -3,11 +3,11 @@
   <title>Pt.ll&#39;s blog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://pt-ll.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://pt-ll.github.io/"/>
   <updated>2026-01-10T12:43:25.336Z</updated>
-  <id>http://example.com/</id>
+  <id>https://pt-ll.github.io/</id>
   
   <author>
     <name>Pt.ll</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>January week 1</title>
-    <link href="http://example.com/2026/01/03/January%20week%201/"/>
-    <id>http://example.com/2026/01/03/January%20week%201/</id>
+    <link href="https://pt-ll.github.io/2026/01/03/January%20week%201/"/>
+    <id>https://pt-ll.github.io/2026/01/03/January%20week%201/</id>
     <published>2026-01-03T14:32:05.750Z</published>
     <updated>2026-01-10T12:43:25.336Z</updated>
     
@@ -64,17 +64,17 @@
     
     
     
-    <category term="计划" scheme="http://example.com/categories/%E8%AE%A1%E5%88%92/"/>
+    <category term="计划" scheme="https://pt-ll.github.io/categories/%E8%AE%A1%E5%88%92/"/>
     
     
-    <category term="Plan" scheme="http://example.com/tags/Plan/"/>
+    <category term="Plan" scheme="https://pt-ll.github.io/tags/Plan/"/>
     
   </entry>
   
   <entry>
     <title>2026 周计划集合</title>
-    <link href="http://example.com/2026/01/03/2026%20%E5%91%A8%E8%AE%A1%E5%88%92%E9%9B%86%E5%90%88/"/>
-    <id>http://example.com/2026/01/03/2026%20%E5%91%A8%E8%AE%A1%E5%88%92%E9%9B%86%E5%90%88/</id>
+    <link href="https://pt-ll.github.io/2026/01/03/2026%20%E5%91%A8%E8%AE%A1%E5%88%92%E9%9B%86%E5%90%88/"/>
+    <id>https://pt-ll.github.io/2026/01/03/2026%20%E5%91%A8%E8%AE%A1%E5%88%92%E9%9B%86%E5%90%88/</id>
     <published>2026-01-03T14:14:04.736Z</published>
     <updated>2026-01-10T12:43:38.680Z</updated>
     
@@ -89,17 +89,17 @@
     
     
     
-    <category term="计划" scheme="http://example.com/categories/%E8%AE%A1%E5%88%92/"/>
+    <category term="计划" scheme="https://pt-ll.github.io/categories/%E8%AE%A1%E5%88%92/"/>
     
     
-    <category term="Plan" scheme="http://example.com/tags/Plan/"/>
+    <category term="Plan" scheme="https://pt-ll.github.io/tags/Plan/"/>
     
   </entry>
   
   <entry>
     <title>题解：P9785 [ROIR 2020] 对常规的斗争 (Day1)</title>
-    <link href="http://example.com/2026/01/03/%E9%A2%98%E8%A7%A3%EF%BC%9AP9785%20[ROIR%202020]%20%E5%AF%B9%E5%B8%B8%E8%A7%84%E7%9A%84%E6%96%97%E4%BA%89%20(Day1)/"/>
-    <id>http://example.com/2026/01/03/%E9%A2%98%E8%A7%A3%EF%BC%9AP9785%20[ROIR%202020]%20%E5%AF%B9%E5%B8%B8%E8%A7%84%E7%9A%84%E6%96%97%E4%BA%89%20(Day1)/</id>
+    <link href="https://pt-ll.github.io/2026/01/03/%E9%A2%98%E8%A7%A3%EF%BC%9AP9785%20[ROIR%202020]%20%E5%AF%B9%E5%B8%B8%E8%A7%84%E7%9A%84%E6%96%97%E4%BA%89%20(Day1)/"/>
+    <id>https://pt-ll.github.io/2026/01/03/%E9%A2%98%E8%A7%A3%EF%BC%9AP9785%20[ROIR%202020]%20%E5%AF%B9%E5%B8%B8%E8%A7%84%E7%9A%84%E6%96%97%E4%BA%89%20(Day1)/</id>
     <published>2026-01-03T09:15:11.609Z</published>
     <updated>2026-01-10T12:44:18.082Z</updated>
     
@@ -120,10 +120,10 @@
     
     
     
-    <category term="题解" scheme="http://example.com/categories/%E9%A2%98%E8%A7%A3/"/>
+    <category term="题解" scheme="https://pt-ll.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
-    <category term="Solution" scheme="http://example.com/tags/Solution/"/>
+    <category term="Solution" scheme="https://pt-ll.github.io/tags/Solution/"/>
     
   </entry>
   
