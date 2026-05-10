@@ -27,7 +27,7 @@
 <meta property="og:description" content="# February # 2.9 来就先切了道 CF985F，注意在第 16 个点会 WA，因为你代码的哈希如果没有取模会造成冲突，可以考虑取模来解决。 接着是 P3065，不难想到把值都扔上 Trie 树，但你会发现贪心是错的，你没法确定字典序。 如： 1232accacb 由此发现贪心是错的。 因为会存在优先级的顺序，所以我们可以根据钦定的字符串的每一位置来建图。 具体的，假如说我要求 mmm">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-03-01T03:31:00.935Z">
-<meta property="article:modified_time" content="2026-04-18T11:13:36.301Z">
+<meta property="article:modified_time" content="2026-05-10T02:12:48.804Z">
 <meta property="article:author" content="Pt.ll">
 <meta property="article:tag" content="Record">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.7k 字
+          5.1k 字
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
         
-          32 分钟
+          43 分钟
         
       </span>
     
@@ -458,6 +458,158 @@
 <p>【数据删除】</p>
 <h2 id="418"><a class="markdownIt-Anchor" href="#418">#</a> 4.18</h2>
 <p>上午来接着刷专题，先做了 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1494">P1494</a>，莫队的板子，简单维护一下发现答案的统计是显然的，用新的值减去旧的值即可，再写个 gcd 就完了。</p>
+<h2 id="419-422"><a class="markdownIt-Anchor" href="#419-422">#</a> 4.19-4.22</h2>
+<p>【数据删除】</p>
+<h2 id="423"><a class="markdownIt-Anchor" href="#423">#</a> 4.23</h2>
+<p>晚练犯唐，看到 1 月犯了 2 个唐氏错误，2、3 月犯了 2 个唐氏错误，4 月还没结束就犯了 5 个唐氏错误就有一种无力的绝望感。</p>
+<p>一个 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P10687">P10687</a> 卡我一下午。</p>
+<p>比较容易想到可以用并查集维护与位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 相同以及不同的点，混合下来就是个背包，记录转移路径即可。</p>
+<h2 id="424427"><a class="markdownIt-Anchor" href="#424427">#</a> 4.24/4.27</h2>
+<p>改题 ing</p>
+<h2 id="428"><a class="markdownIt-Anchor" href="#428">#</a> 4.28</h2>
+<p>模拟赛和晚练都还没改完，发现 T3 似乎需要根号分治，学习一下。</p>
+<p>这个算法似乎有点暴力，对于数据结构的部分更像是暴力中选优，而其他部分更容易考虑互不相干的两个点（或区间）分别进行操作（有点像折半搜索的思路）。</p>
+<p>有点暴力，但复杂度降得很快，但是需要找到平衡点，不然后续总处理时的复杂度只会更高。</p>
+<p>对于数据结构的例题，可以思考 <a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/797/E">CF797E</a>。</p>
+<p>考虑两种暴力：</p>
+<ul>
+<li>直接在询问中计算</li>
+</ul>
+<p>复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mfrac><mi>n</mi><mi>k</mi></mfrac><mo>×</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\frac {n} {k} \times q)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.095em;vertical-align:-0.345em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mclose">)</span></span></span></span></p>
+<ul>
+<li>预处理每一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">p,k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></li>
+</ul>
+<p>复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>发现对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≥</mo><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">k \ge \sqrt{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span> 的部分第一种暴力很快，复杂度来到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><msqrt><mi>n</mi></msqrt><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n \sqrt{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.05028em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，那可以考虑预处理 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≤</mo><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">k \le \sqrt{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span> 的情况，二者结合即可通过。</p>
+<h2 id="429"><a class="markdownIt-Anchor" href="#429">#</a> 4.29</h2>
+<p>早上过来先把昨晚的 <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2226/problem/D">CF2226D</a> 给改了 mx -&gt; mxl，6。</p>
+<p>把这题的<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/br6ai1u9">题解</a>写了。</p>
+<p>写一下专题吧，先开 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2894">P2894</a>。</p>
+<p>一眼的思路是考虑维护区间左边的空白，右边的空白和总的最长空白。</p>
+<p>用线段树维护即可。</p>
+<h2 id="430"><a class="markdownIt-Anchor" href="#430">#</a> 4.30</h2>
+<p>MD，模拟赛打成一坨，T1 晚练原题结果数组太多、太大直接 -100pts，T4 把异或看成加法了，再 -10pts。</p>
+<p>咋说，赛时不仔细还是压根不会？</p>
+<p>本来 rk 8 现在前十都有问题，T2 瞬切，结果写了 2 小时的 T4 伪做法，哎难绷。</p>
+<p>或许我这就是我的真实实力？之前 6 场比赛全是运气好？</p>
+<p>家长老师都说坚信我可以更上一步，不应该止步于此，想要更上一步就得拿出水平来，现在在我面前叫的人迟早要被扔下去，但哪来的底气呢。</p>
+<blockquote>
+<p>黑夜是光明的伏笔，更何况还有星星</p>
+</blockquote>
+<h1 id="may"><a class="markdownIt-Anchor" href="#may">#</a> May</h1>
+<h2 id="51"><a class="markdownIt-Anchor" href="#51">#</a> 5.1</h2>
+<p>坚持写日记。</p>
+<p>处理一下比赛估值。</p>
+<p>考虑处理模拟赛 T1。</p>
+<p>明晚有一场 ABC 只打 EFG。</p>
+<p>解决模拟赛 T1，但还是被卡常了。</p>
+<blockquote>
+<p>对这世界都充满厌恶</p>
+<p>我不再相信任何人对我的眷顾</p>
+<p>我不停努力因为我没有天赋</p>
+<p>如果我没成功我就没有脸哭</p>
+<p>我为了我的梦想为了我的前途</p>
+<p>为了我的未来压下我的全部</p>
+<p>尽管这一路有很多艰难险阻</p>
+<p>他们想要打倒我但我很坚固</p>
+</blockquote>
+<h2 id="52"><a class="markdownIt-Anchor" href="#52">#</a> 5.2</h2>
+<p>帮 PLH 改模拟赛 T1。</p>
+<p>验 PLOI Round 2 的题目，被 T2 卡了？</p>
+<p>下午写了一下 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4135">P4135</a>，分块，调半天。</p>
+<p>考虑定义 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 表示对于区间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>，考虑数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 出现了多少次。</p>
+<p>在定义 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">g_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 表示对于分块后的区间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 有多少个出现为偶数的数。</p>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">g_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 预处理即可。</p>
+<blockquote>
+<p>So come on and love me like you did before</p>
+<p>Tell me I’m worth fightin’ for</p>
+<p>Show me that there’s somethin’ more</p>
+<p>We can do better</p>
+<p>Brick by brick, we built these walls</p>
+<p>But tonight, we’ll watch them fall, so</p>
+<p>Love me like you did before</p>
+</blockquote>
+<h2 id="53"><a class="markdownIt-Anchor" href="#53">#</a> 5.3</h2>
+<p>早上起来先被我妈压力。</p>
+<p>下午打了一下<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/contest/323598">梦熊的比赛</a>，打完前三题发现不会 T4 就跑了。</p>
+<p>明天开学啊。</p>
+<blockquote>
+<p>Good morning and good night</p>
+<p>I’ll wake up at twilight</p>
+<p>It’s gonna be alright</p>
+<p>We don’t even have to try</p>
+<p>It’s always a good time</p>
+</blockquote>
+<h2 id="54"><a class="markdownIt-Anchor" href="#54">#</a> 5.4</h2>
+<p>早上过来先看榜，学了一下 CDQ 分治结果没过<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3810">板子</a>？</p>
+<p>思考一下发现好像值域取错了，但还是错。</p>
+<p>有可能有重复的数，这要单独处理，改改就 A 了。</p>
+<p>下午改一下模拟赛的 T3，似乎小常数的  <code>set</code>  就可以过？</p>
+<p>但因为忘记  <code>lt--</code>  调了半个下午。</p>
+<p>似乎在 Github 上找到了个不得了的<a target="_blank" rel="noopener" href="https://sigma-file-manager.vercel.app/">文件资源管理器</a>，挺好用的。</p>
+<blockquote>
+<p>In the faded light you touch my body</p>
+<p>I can feel your hands on my skin</p>
+<p>Think you got me right where you want me</p>
+<p>But you’re just in my way</p>
+<p>I came to party on my own</p>
+<p>Don’t need nobody in my zone</p>
+<p>I get down to the beat I lose control</p>
+</blockquote>
+<h2 id="55"><a class="markdownIt-Anchor" href="#55">#</a> 5.5</h2>
+<p>坚持写日记！</p>
+<p>写了一早上的 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4390">P4390</a>，思路不难想，结果因为  <code>while</code>  -&gt;  <code>if</code>  调了一上午。</p>
+<p>考虑计算答案的过程，发现这是一个二位前缀和，这提示我们可以考虑对于前缀和的每一部分分开考虑（令 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 为所查矩形的左下角，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mi>l</mi><mo separator="true">,</mo><mi>y</mi><mi>l</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(xl,yl)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mclose">)</span></span></span></span> 为右上角），即分别处理出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>y</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mtext> </mtext><mo stretchy="false">(</mo><mi>x</mi><mi>l</mi><mo separator="true">,</mo><mi>y</mi><mi>l</mi><mo stretchy="false">)</mo><mtext> </mtext><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>y</mi><mi>l</mi><mo stretchy="false">)</mo><mtext> </mtext><mo stretchy="false">(</mo><mi>x</mi><mi>l</mi><mo separator="true">,</mo><mi>y</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x-1,y-1) \ (xl,yl) \ (x-1,yl) \ (xl,y-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace"> </span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mclose">)</span><span class="mspace"> </span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mclose">)</span><span class="mspace"> </span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 这几个点的二维前缀和。</p>
+<p>这题目第一眼似乎是个二维偏序，但它有个隐含的第三位即时间。</p>
+<p>我们可以按照时间排序，对于每一次的分治内部考虑按照横坐标排序，最后把纵坐标的处理归到树状数组上即可。</p>
+<p>写了一下午的水题？</p>
+<h2 id="56"><a class="markdownIt-Anchor" href="#56">#</a> 5.6</h2>
+<p>似乎没有记录？</p>
+<p>早上一直再改晚练，下午又在打 <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2224">CF</a>。</p>
+<p>能涨就是赢。</p>
+<h2 id="57"><a class="markdownIt-Anchor" href="#57">#</a> 5.7</h2>
+<p>改了一天的晚练，但还是 T 了啊。</p>
+<p>难绷。</p>
+<h2 id="58"><a class="markdownIt-Anchor" href="#58">#</a> 5.8</h2>
+<p>早上过来先改了昨晚的晚练，写了篇<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/4ee6fdo7">题解</a>。</p>
+<p>下午帮 PLH 验了一下 T2 的备用题，最后在我的强烈要求下改成了正式的。</p>
+<p>似乎 T4 出了一堆 NP-Hard？</p>
+<p><s>征集 T4</s>。</p>
+<h2 id="59"><a class="markdownIt-Anchor" href="#59">#</a> 5.9</h2>
+<p>似乎又是改了一上午的晚练，下午打 CWCPC R1 结果因为没吃午饭差点低血糖，似乎只切了绿及以下？</p>
 
                 
               </div>
